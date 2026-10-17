@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f6f3e9"><meta name="description" content="原创医学社团小游戏：投放、碰撞，合成完整的人体器官图鉴。"><title>合成大器官 · 器官研究所</title><link rel="icon" href="./assets/11.svg" type="image/svg+xml"><link rel="stylesheet" href="./style.css"></head>
+<body>
+<main class="app">
+ <header class="brand"><a class="logo" href="./" aria-label="合成大器官首页">O<span>+</span></a><div><small>THE LITTLE ORGAN LAB</small><h1>合成大器官<span class="tag">医学社团特别企划</span></h1></div><button id="sound" class="icon-button" aria-label="开启声音" aria-pressed="false">声音 关</button></header>
+ <div class="layout">
+  <aside class="intro"><span class="eyebrow">欢迎来到器官研究所</span><h2>小小碰撞，<br>大大<span>脑洞。</span></h2><p>从一枚小阑尾开始，<br>把奇妙的人体，一点点拼起来。</p><div class="hero-art"><img src="./assets/11.svg" alt="原创卡通大脑"><span class="orbit a">HELLO, BRAIN!</span><span class="orbit b">11 级终极目标</span><i>✦</i></div><div class="note"><b>今日研究课题</b><p>相同器官碰一碰，升级新器官。<br>试着解锁你的第一颗大脑！</p></div><span class="edition">NO. 001 / 新生的第一堂趣味医学课</span></aside>
+  <section class="play-column" aria-label="游戏区域"><div class="scorebar"><div><span class="label">本局得分</span><strong id="score" aria-live="polite">0</strong></div><div class="next"><span class="label">下一个</span><img id="next" alt="下一个器官"><b id="next-name"></b></div></div>
+   <div class="board" id="board"><canvas id="game" width="480" height="720" tabindex="0" aria-label="器官投放区。左右方向键调整位置，空格投放。"></canvas><div class="board-label">ORGAN LAB <span>碰一碰，发现新可能</span></div><div class="danger-label">堆叠警戒线</div>
+    <div class="overlay" id="start-screen"><div class="welcome-card"><span class="eyebrow">一场可爱的身体探索</span><img src="./assets/09.svg" alt="卡通解剖心脏"><h2>准备好，合成了吗？</h2><p>左右移动瞄准，松手投放。<br>两个相同器官相碰，就会升级。</p><button class="primary" id="start">开始研究 <span>→</span></button><small>不限时 · 无广告 · 成绩仅保留本局</small></div></div>
+    <div class="overlay hidden" id="end-screen" role="dialog" aria-modal="true" aria-labelledby="end-title"><div class="result"><span class="eyebrow">本次研究圆满结束</span><h2 id="end-title">游戏结束</h2><p class="result-label">本局最终得分</p><strong id="final-score">0</strong><span id="rank" class="rank"></span><p>请向现场工作人员<br><b>展示此页面领取奖励</b></p><button class="primary" id="again">再玩一次 <span>↻</span></button><small>分数以本页为准 · 重新开始后清零</small></div></div>
+    <div class="overlay hidden" id="confirm-screen" role="dialog" aria-modal="true" aria-label="确认重新开始"><div class="result"><h2>开始新的研究？</h2><p>本局分数和器官将清空。</p><button class="primary" id="confirm-restart">确认重新开始</button><button class="secondary" id="cancel-restart">继续本局</button></div></div>
+   </div><div class="below"><span><i class="status-dot"></i><span id="status">准备开始研究</span></span><button id="restart" class="text-button">重新开始 ↻</button></div>
+  </section>
+  <aside class="guide"><section class="catalog"><div class="section-title"><span>合成图鉴</span><small>01 → 11</small></div><p class="muted">每一次相遇，都有新发现。</p><ol id="catalog"></ol><div class="brain-tip">两颗大脑相碰消除 <b>+500</b></div></section><section class="howto"><div class="section-title">研究小贴士 <span>↙</span></div><p><b>01</b> 拖动瞄准，松手投放</p><p><b>02</b> 相同器官接触后升级</p><p><b>03</b> 堆过警戒线停稳会结束</p><small>电脑可用 ← → 与空格键操作<br>本局不限时，慢慢思考再出手。</small></section></aside>
+ </div><footer>为好奇心而造 <span>✦</span> 原创卡通插画 · 仅供娱乐，非解剖教学比例</footer>
+</main><script src="./config.js"></script><script src="./assets/colliders.js"></script><script src="./physics.js"></script><script src="./game.js"></script></body></html>
